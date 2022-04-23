@@ -44,15 +44,18 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-Win
+### Win
+
 ![Win Part 1](https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/win.gif?v=1650694307387)
 ![Win Part 2](https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/win2.gif?v=1650694376758)
 
-Loss
+### Loss
+
 ![Loss](https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/loss.gif?v=1650694722427)
 
 
-Night Mode and Post on Leaderboard
+### Night Mode and Post on Leaderboard
+
 ![Night Mode and Post on Leaderboard](https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/night_post.gif?v=1650694570025)
 
 ## Reflection Questions
