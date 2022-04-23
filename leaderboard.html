@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/favicon.ico?v=1650093600188"
+    />
+    <title>Memory Game</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    
+    <!-- javascript -->
+    
+    <!-- Parse database -->
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <script src="/script.js" defer></script>
+    <script src="/leaderboard.js" defer></script>
+    
+  </head>
+  <body onload="load()">
+    <!-- this is the start of content -->
+    <input type="checkbox" id="toggleMode" onclick="toggleClick()" name="toggle" />
+    <label for="toggleMode"></label>
+    <div id="nav" style="line-height: 0px; text-align: center">
+      <p>
+        <span class="caption">Wins</span><br /><span id="totalWins"></span>
+      </p>
+      <p>
+        <span class="caption">Losses</span><br /><span id="totalLosses"></span>
+      </p>
+    </div>
+    <div id="leaderboard">
+      <h1>
+        Leaderboard
+      </h1>
+      <div id="submit">
+        <label for="name">Name</label>
+        <input id="username" type="text" placeholder="Anonymous" maxlength="20"/>
+        <button id="createButton" onclick="createParseUser()">Submit your score</button>
+        <a href="index.html">
+          <button id="navGame">Back</button>
+        </a>
+      </div>
+
+      <table id="table">
+        <tr>
+          <th>Ranking</th>
+          <th>Username</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Total Score</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+
+</html>

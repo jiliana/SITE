@@ -1,0 +1,279 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+#toggleMode {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+#toggleMode + label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  opacity: 50%;
+  background: url("https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/moon-solid.svg?v=1650144811871")
+    left top no-repeat;
+}
+
+#toggleMode:checked + label {
+  background: url("https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/sun-solid.svg?v=1650143507591")
+    left top no-repeat;
+  background-color: white;
+  border-radius: 100%;
+}
+
+:root {
+  --bgcolor: #84a59d;
+  --text: white;
+  --lightBtnColor: #a3bbb5;
+  --shadowcolor: rgba(0, 0, 0, 0.25);
+  --stopBtnColor: #727d71;
+}
+
+.nightmode {
+  --bgcolor: black;
+  --text: white;
+  --lightBtnColor: gray;
+  --shadowcolor: rgba(255, 255, 255, 0.25);
+  --stopBtnColor: darkred;
+}
+
+/* adjust typography defaults */
+body {
+  font-family: "Arial", sans-serif;
+  background: var(--bgcolor);
+  color: var(--text);
+  height: 100vh;
+  margin: auto;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 74px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 52px;
+}
+
+#nav {
+  display: flex;
+  gap: 20vw;
+  justify-content: center;
+  text-align: center;
+}
+
+.caption {
+  font-size: 24px;
+}
+
+#nav > p {
+  line-height: 30px;
+  margin-bottom: 0px;
+}
+#game {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+
+button > img {
+  margin: 20%;
+  opacity: 50%;
+  pointer-events: none;
+}
+
+#leftContent {
+  padding: 40px;
+  margin: auto;
+}
+
+#startBtn,
+#stopBtn {
+  padding: 10px 55px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 30px;
+  width: 250px;
+}
+
+#leaderboardBtn {
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  width: 200px;
+}
+
+#startBtn,
+#leaderboardBtn {
+  background-color: var(--lightBtnColor);
+}
+
+#stopBtn {
+  background-color: var(--stopBtnColor);
+}
+
+#gameButtonArea {
+  margin: auto;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50vw;
+  max-width: 1000px;
+}
+
+#gameButtonArea > button {
+  flex: 1 0 21%;
+  min-height: 100px;
+  min-width: 100px;
+  margin: 20px;
+
+  border: 5px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 11px 11px 4px var(--shadowcolor);
+  border-radius: 20px;
+}
+
+#btn1 {
+  background: #f6bd60;
+}
+#btn2 {
+  background: #f7ede2;
+}
+#btn3 {
+  background: #f5cac3;
+}
+#btn4 {
+  background: #f28482;
+}
+#btn5 {
+  background: #bdb8b0;
+}
+#btn6 {
+  background: #515a47;
+}
+
+#btn1:active,
+#btn1.lit,
+#btn2:active,
+#btn2.lit,
+#btn3:active,
+#btn3.lit,
+#btn4:active,
+#btn4.lit,
+#btn5:active,
+#btn5.lit,
+#btn6:active,
+#btn6.lit {
+  filter: brightness(0.7);
+  box-shadow: 5px 5px 4px var(--shadowcolor);
+  transition-timing-function: ease-out;
+  transition: 0.1s;
+  transform: scale(0.95);
+}
+
+.hidden {
+  display: none;
+}
+
+#leaderboard {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+#leaderboard > h1 {
+  text-align: center;
+  margin: 0px;
+}
+
+#table {
+  border: 2px solid;
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+
+#submit,
+#table {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+
+th {
+  background: white;
+  color: var(--bgcolor);
+}
+
+#username {
+  margin: 0px 10px;
+  border: none;
+  border-radius: 12px;
+}
+
+#createButton,
+#navGame {
+  padding: 5px 20px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--lightBtnColor);
+}
+
+#navGame {
+  margin-left: 10px;
+}

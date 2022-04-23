@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/favicon.ico?v=1650093600188"
+    />
+    <title>Memory Game</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+
+    <!-- confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    
+    <!-- audio files -->
+    <audio
+      src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/catmeow.wav?v=1650337821021"
+      id="catAudio"
+    ></audio>
+    <audio
+      src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/dogbark.wav?v=1650337232751"
+      id="dogAudio"
+    ></audio>
+    <audio
+      src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/cowbell.wav?v=1650338129166"
+      id="cowAudio"
+    ></audio>
+    <audio
+      src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/birdcall.wav?v=1650338360340"
+      id="birdAudio"
+    ></audio>
+    <audio
+      src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/frog.mp3?v=1650339022372"
+      id="frogAudio"
+    ></audio>
+    <audio
+      src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/bubbles.wav?v=1650341849443"
+      id="fishAudio"
+    ></audio>
+
+    <!-- this is the start of content -->
+    <input
+      type="checkbox"
+      id="toggleMode"
+      onclick="toggleClick()"
+      name="toggle"
+    />
+    <label for="toggleMode"></label>
+    <div id="nav" style="line-height: 0px; text-align: center">
+      <p>
+        <span class="caption">Wins</span><br /><span id="totalWins">0</span>
+      </p>
+      <p>
+        <span class="caption">Losses</span><br /><span id="totalLosses">0</span>
+      </p>
+    </div>
+    <div id="game">
+      <div id="leftContent">
+        <h1>
+          Light and Sound <br />
+          Memory Game
+        </h1>
+        <h2>Are you ready to test your memory?</h2>
+        <p style="line-height: 175%">
+          Instructions:
+          <br />
+          Repeat the pattern by pressing the buttons!
+          <br />
+          Click the START button to start a new game,
+          <br />
+          or the STOP button to end your current one.
+        </p>
+
+        <button id="startBtn" onclick="startGame()">START</button>
+        <button id="stopBtn" class="hidden" onclick="stopGame()">STOP</button>
+        <br />
+        <a href="leaderboard.html"
+          ><button id="leaderboardBtn">Leaderboard</button></a
+        >
+      </div>
+
+      <div id="gameButtonArea">
+        <button
+          id="btn1"
+          onclick=" guess(1);"
+          onmousedown="playAudio(1); startTone(1)"
+          onmouseup="stopTone()"
+        >
+          <img
+            src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/cat-solid.svg?v=1650140788872"
+          />
+        </button>
+        <button
+          id="btn2"
+          onclick="guess(2)"
+          onmousedown="playAudio(2); startTone(2); "
+          onmouseup="stopTone()"
+        >
+          <img
+            src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/dog-solid.svg?v=1650141140658"
+          />
+        </button>
+        <button
+          id="btn3"
+          onclick="guess(3)"
+          onmousedown="playAudio(3); startTone(3)"
+          onmouseup="stopTone()"
+        >
+          <img
+            src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/cow-solid.svg?v=1650141207095"
+          />
+        </button>
+        <button
+          id="btn4"
+          onclick="guess(4)"
+          onmousedown="playAudio(4); startTone(4)"
+          onmouseup="stopTone()"
+        >
+          <img
+            src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/crow-solid.svg?v=1650141274201"
+          />
+        </button>
+        <button
+          id="btn5"
+          onclick="guess(5)"
+          onmousedown="playAudio(5); startTone(5)"
+          onmouseup="stopTone()"
+        >
+          <img
+            src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/frog-solid.svg?v=1650142239373"
+          />
+        </button>
+        <button
+          id="btn6"
+          onclick="guess(6)"
+          onmousedown="playAudio(6); startTone(6)"
+          onmouseup="stopTone()"
+        >
+          <img
+            src="https://cdn.glitch.global/439abd06-2850-4686-8027-bbe626ece68d/fish-solid.svg?v=1650142278686"
+          />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
